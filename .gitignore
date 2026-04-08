@@ -1,0 +1,26 @@
+# Dependency directories
+node_modules/
+client/node_modules/
+
+# Build directories
+portals/
+classes/
+target/
+test-classes/
+
+# Local configuration files
+*.local
+java/project.properties
+.admin/
+**/.DS_Store
+**/.env
+**/.env.*
+!client/.env
+.history/
+.vscode/
+
+# cache
+py/__pycache__/
+.classpath
+.project
+.settings/
