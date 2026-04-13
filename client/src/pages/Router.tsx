@@ -9,6 +9,7 @@
 //   3. If the page is an MCP tool UI, set its path to match the resourceURI in pixel_mcp.json
 
 import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
+import { CompositionTimelinePage } from "./CompositionTimelinePage";
 import { DebugComparisonPage } from "./DebugComparisonPage";
 import { ErrorPage } from "./ErrorPage";
 import { HomePage } from "./HomePage";
@@ -24,11 +25,10 @@ const router = createHashRouter([
 				index: true,
 				Component: HomePage,
 			},
-			// To add a new page:
-			// {
-			//     path: '/your-route',
-			//     Component: YourPage,
-			// },
+			{
+				path: '/composition-timeline',
+				Component: CompositionTimelinePage,
+			},
 			{
 				path: '/debug-comparison',
 				Component: DebugComparisonPage,

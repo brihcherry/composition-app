@@ -1,0 +1,1945 @@
+{
+    "layout": "prerna.ui.components.specific.tap.GraphTimePlaySheet",
+    "pkqlOutput": {
+        "insights": [
+            {
+                "closedPanels": [],
+                "newColumns": {},
+                "dataID": 0,
+                "feData": {},
+                "pkqlData": [],
+                "clear": false,
+                "insightID": "019d8720-0a25-7e48-a911-8e700152ad3f",
+                "newInsights": []
+            }
+        ]
+    },
+    "headers": [],
+    "nodes": {
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Orders",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Orders",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Provider_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Provider_Information%MHS_GENESIS-NMIS-Provider_Information%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Provider_Information%MHS_GENESIS-NMIS-Provider_Information%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Provider_Information%MHS_GENESIS-NMIS-Provider_Information%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Provider_Information%MHS_GENESIS-NMIS-Provider_Information%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Provider_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Allergies",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Allergies",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Provider_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Provider_Information",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Provider_Information",
+                "SystemInterface": 1,
+                "PhysicalName": "Provider_Information",
+                "VERTEX_LABEL_PROPERTY": "Provider_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Allergy_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Allergy_Information",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Allergy_Information",
+                "SystemInterface": 2,
+                "PhysicalName": "Allergy_Information",
+                "VERTEX_LABEL_PROPERTY": "Allergy_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Allergies": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Allergies",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Allergies",
+                "SystemInterface": 1,
+                "PhysicalName": "Allergies",
+                "VERTEX_LABEL_PROPERTY": "Allergies"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Laboratory": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Laboratory",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Laboratory",
+                "SystemInterface": 1,
+                "PhysicalName": "Laboratory",
+                "VERTEX_LABEL_PROPERTY": "Laboratory"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Demographics",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Demographics",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "SystemInterface": 1,
+                "PhysicalName": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "VERTEX_LABEL_PROPERTY": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Orders": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Orders",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Orders",
+                "SystemInterface": 1,
+                "PhysicalName": "Orders",
+                "VERTEX_LABEL_PROPERTY": "Orders"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+                "SystemInterface": 1,
+                "PhysicalName": "Demographics",
+                "VERTEX_LABEL_PROPERTY": "Demographics"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Patient_ID",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_ID%MHS_GENESIS-NMIS-Patient_ID%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_ID%MHS_GENESIS-NMIS-Patient_ID%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_ID%MHS_GENESIS-NMIS-Patient_ID%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_ID%MHS_GENESIS-NMIS-Patient_ID%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Patient_ID",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Laboratory",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Laboratory",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Patient_Test_Results",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Test_Results%MHS_GENESIS-NMIS-Patient_Test_Results%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Test_Results%MHS_GENESIS-NMIS-Patient_Test_Results%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Test_Results%MHS_GENESIS-NMIS-Patient_Test_Results%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Test_Results%MHS_GENESIS-NMIS-Patient_Test_Results%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Patient_Test_Results",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/CIS-Essentris": {
+            "uri": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "propHash": {
+                "SystemInterface": 8,
+                "propUriHash": {},
+                "VERTEX_TYPE_PROPERTY": "System",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris",
+                "Outputs": 8,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris",
+                "URI": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+                "VERTEX_COLOR_PROPERTY": "31,119,180"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Dietetics",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Dietetics",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Order_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Order_Information",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Order_Information",
+                "SystemInterface": 1,
+                "PhysicalName": "Order_Information",
+                "VERTEX_LABEL_PROPERTY": "Order_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Test_Results": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Test_Results",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Test_Results",
+                "SystemInterface": 1,
+                "PhysicalName": "Patient_Test_Results",
+                "VERTEX_LABEL_PROPERTY": "Patient_Test_Results"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Dietetics": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Dietetics",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Dietetics",
+                "SystemInterface": 1,
+                "PhysicalName": "Dietetics",
+                "VERTEX_LABEL_PROPERTY": "Dietetics"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Patient_Vital_Signs",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Patient_Vital_Signs",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-NMIS-Patient_Demographics_and_Information%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-NMIS-Patient_Demographics_and_Information%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-NMIS-Patient_Demographics_and_Information%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-NMIS-Patient_Demographics_and_Information%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Healthcare_Providers",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Healthcare_Providers",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Admissions": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Admissions",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Admissions",
+                "SystemInterface": 1,
+                "PhysicalName": "Admissions",
+                "VERTEX_LABEL_PROPERTY": "Admissions"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/MHS_GENESIS": {
+            "uri": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+                "SystemInterface": 20,
+                "PhysicalName": "MHS_GENESIS",
+                "Outputs": 20,
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Medical_Facilities": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Medical_Facilities",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Medical_Facilities",
+                "SystemInterface": 1,
+                "PhysicalName": "Medical_Facilities",
+                "VERTEX_LABEL_PROPERTY": "Medical_Facilities"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Allergy_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Allergy_Information%MHS_GENESIS-NMIS-Allergy_Information%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Allergy_Information%MHS_GENESIS-NMIS-Allergy_Information%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Allergy_Information%MHS_GENESIS-NMIS-Allergy_Information%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Allergy_Information%MHS_GENESIS-NMIS-Allergy_Information%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Allergy_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Encounter_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%MHS_GENESIS-NMIS-Encounter_Information%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%MHS_GENESIS-NMIS-Encounter_Information%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%MHS_GENESIS-NMIS-Encounter_Information%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%MHS_GENESIS-NMIS-Encounter_Information%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Encounter_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Healthcare_Providers": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Healthcare_Providers",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Healthcare_Providers",
+                "SystemInterface": 1,
+                "PhysicalName": "Healthcare_Providers",
+                "VERTEX_LABEL_PROPERTY": "Healthcare_Providers"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Encounter_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+                "SystemInterface": 2,
+                "PhysicalName": "Encounter_Information",
+                "VERTEX_LABEL_PROPERTY": "Encounter_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Admissions",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Admissions",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Patient_Administration",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Administration%MHS_GENESIS-NMIS-Patient_Administration%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Administration%MHS_GENESIS-NMIS-Patient_Administration%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Administration%MHS_GENESIS-NMIS-Patient_Administration%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Administration%MHS_GENESIS-NMIS-Patient_Administration%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Patient_Administration",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Order_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Order_Information%MHS_GENESIS-NMIS-Order_Information%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Order_Information%MHS_GENESIS-NMIS-Order_Information%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Order_Information%MHS_GENESIS-NMIS-Order_Information%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Order_Information%MHS_GENESIS-NMIS-Order_Information%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Order_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Patient_ID",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Patient_ID",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Allergy_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Allergy_Information",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Medical_Facilities",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Medical_Facilities",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Assessments": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+                "SystemInterface": 1,
+                "PhysicalName": "Assessments",
+                "VERTEX_LABEL_PROPERTY": "Assessments"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Administration": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Administration",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Administration",
+                "SystemInterface": 2,
+                "PhysicalName": "Patient_Administration",
+                "VERTEX_LABEL_PROPERTY": "Patient_Administration"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+                "SystemInterface": 2,
+                "PhysicalName": "Patient_Demographics_and_Information",
+                "VERTEX_LABEL_PROPERTY": "Patient_Demographics_and_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Patient_Administration",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Patient_Administration",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Room",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Room%MHS_GENESIS-NMIS-Room%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Room%MHS_GENESIS-NMIS-Room%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Room%MHS_GENESIS-NMIS-Room%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Room%MHS_GENESIS-NMIS-Room%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Room",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Vital_Signs": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Vital_Signs",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Vital_Signs",
+                "SystemInterface": 1,
+                "PhysicalName": "Patient_Vital_Signs",
+                "VERTEX_LABEL_PROPERTY": "Patient_Vital_Signs"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%NMIS%Assessments",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%NMIS%Assessments",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-NMIS-Nutrition_Management",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Nutrition_Management%MHS_GENESIS-NMIS-Nutrition_Management%NMIS%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Nutrition_Management%MHS_GENESIS-NMIS-Nutrition_Management%NMIS%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Nutrition_Management%MHS_GENESIS-NMIS-Nutrition_Management%NMIS%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Nutrition_Management%MHS_GENESIS-NMIS-Nutrition_Management%NMIS%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-NMIS-Nutrition_Management",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/NMIS": {
+            "uri": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "Inputs": 28,
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/NMIS",
+                "SystemInterface": 28,
+                "PhysicalName": "NMIS",
+                "VERTEX_LABEL_PROPERTY": "NMIS"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Nutrition_Management": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Nutrition_Management",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Nutrition_Management",
+                "SystemInterface": 2,
+                "PhysicalName": "Nutrition_Management",
+                "VERTEX_LABEL_PROPERTY": "Nutrition_Management"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Room": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Room",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Room",
+                "SystemInterface": 2,
+                "PhysicalName": "Room",
+                "VERTEX_LABEL_PROPERTY": "Room"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_ID": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_ID",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_ID",
+                "SystemInterface": 2,
+                "PhysicalName": "Patient_ID",
+                "VERTEX_LABEL_PROPERTY": "Patient_ID"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Encounter_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Encounter_Information",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Room",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Room",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "CIS-Essentris%NMIS%Nutrition_Management",
+                "Outputs": 2,
+                "timeHash": {
+                    "Decommissioned": {
+                        "phase": "Decommissioned"
+                    }
+                },
+                "PhysicalName": "CIS-Essentris%NMIS%Nutrition_Management",
+                "Inputs": 1,
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management",
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        }
+    },
+    "data": [
+        []
+    ],
+    "edges": [
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Encounter_Information:Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Encounter_Information:Encounter_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Encounter_Information:Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_ID:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_ID:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_ID:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Provider_Information:Provider_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Provider_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Provider_Information:Provider_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Provider_Information:Provider_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Admissions",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Admissions",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Admissions"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_ID:Patient_ID",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_ID",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_ID:Patient_ID",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_ID:Patient_ID"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Provider_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Provider_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Provider_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Demographics_and_Information:Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Test_Results:Patient_Test_Results",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Test_Results",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Test_Results:Patient_Test_Results",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Test_Results:Patient_Test_Results"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Assessments:Assessments",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Assessments:Assessments",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Assessments:Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Orders:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Orders:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Orders:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Healthcare_Providers",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Healthcare_Providers",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Healthcare_Providers"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Laboratory",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Laboratory",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Laboratory"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Nutrition_Management:Nutrition_Management",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Nutrition_Management",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Nutrition_Management:Nutrition_Management",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Nutrition_Management:Nutrition_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Demographics:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Demographics:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Demographics:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Orders",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Orders",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Orders"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Healthcare_Providers:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Healthcare_Providers:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Healthcare_Providers:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Assessments:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Assessments:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Assessments:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Medical_Facilities",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Medical_Facilities",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Medical_Facilities"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Allergy_Information:NMIS/CIS-Essentris%NMIS%Allergy_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Allergy_Information:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Allergy_Information:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Allergy_Information:NMIS/CIS-Essentris%NMIS%Allergy_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Admissions:Admissions",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Admissions",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Admissions:Admissions",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Admissions:Admissions"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Allergy_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Allergy_Information:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Allergy_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Allergies:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Allergies:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Allergies:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Assessments",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Assessments",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Assessments",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Dietetics:Dietetics",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Dietetics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Dietetics:Dietetics",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Dietetics:Dietetics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Laboratory:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Laboratory:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Laboratory:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Dietetics",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Dietetics",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Dietetics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_ID:Patient_ID",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_ID",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_ID:Patient_ID",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_ID:Patient_ID"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Dietetics:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Dietetics",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Dietetics:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Dietetics:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Demographics:Demographics",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Demographics:Demographics",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Demographics:Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Encounter_Information/CIS-Essentris:CIS-Essentris%NMIS%Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Encounter_Information",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Encounter_Information",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Encounter_Information/CIS-Essentris:CIS-Essentris%NMIS%Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Demographics_and_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Demographics_and_Information:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Demographics_and_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Nutrition_Management",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Nutrition_Management",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Nutrition_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Vital_Signs:NMIS/CIS-Essentris%NMIS%Patient_Vital_Signs:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Vital_Signs:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Patient_Vital_Signs:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Vital_Signs:NMIS/CIS-Essentris%NMIS%Patient_Vital_Signs:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Encounter_Information:Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Encounter_Information:Encounter_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Encounter_Information:Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Administration:NMIS/CIS-Essentris%NMIS%Patient_Administration:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Administration:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Patient_Administration:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Administration:NMIS/CIS-Essentris%NMIS%Patient_Administration:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Administration:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Administration:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Administration:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Order_Information:Order_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Order_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Order_Information:Order_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Order_Information:Order_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Allergy_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Allergy_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Allergy_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Administration",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Administration",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Administration"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Medical_Facilities:Medical_Facilities",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Medical_Facilities",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Medical_Facilities:Medical_Facilities",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Medical_Facilities:Medical_Facilities"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Demographics_and_Information/CIS-Essentris:CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Patient_Demographics_and_Information",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Demographics_and_Information/CIS-Essentris:CIS-Essentris%NMIS%Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Room:Room",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Room",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Room:Room",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Room:Room"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_ID",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_ID",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Patient_ID",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_ID"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Administration:Patient_Administration",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Administration",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Administration:Patient_Administration",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Administration:Patient_Administration"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Room:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Room:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Room:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Allergies",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Allergies",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Allergies"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Administration/CIS-Essentris:CIS-Essentris%NMIS%Patient_Administration",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Administration",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Patient_Administration",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Patient_Administration",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Administration/CIS-Essentris:CIS-Essentris%NMIS%Patient_Administration"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Allergies:Allergies",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Allergies",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Allergies",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Allergies:Allergies",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Allergies:Allergies"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Healthcare_Providers:Healthcare_Providers",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Healthcare_Providers",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Healthcare_Providers",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Healthcare_Providers:Healthcare_Providers",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Healthcare_Providers:Healthcare_Providers"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Vital_Signs/CIS-Essentris:CIS-Essentris%NMIS%Patient_Vital_Signs",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Patient_Vital_Signs",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Patient_Vital_Signs",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_Vital_Signs/CIS-Essentris:CIS-Essentris%NMIS%Patient_Vital_Signs"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Demographics_and_Information:NMIS/CIS-Essentris%NMIS%Patient_Demographics_and_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Demographics_and_Information:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Patient_Demographics_and_Information:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_Demographics_and_Information:NMIS/CIS-Essentris%NMIS%Patient_Demographics_and_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Order_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Order_Information:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Order_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Demographics",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Demographics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%NMIS%Demographics",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%NMIS%Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Encounter_Information:NMIS/CIS-Essentris%NMIS%Encounter_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Encounter_Information:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Encounter_Information:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Encounter_Information:NMIS/CIS-Essentris%NMIS%Encounter_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Allergy_Information/CIS-Essentris:CIS-Essentris%NMIS%Allergy_Information",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Allergy_Information",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Allergy_Information",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Allergy_Information/CIS-Essentris:CIS-Essentris%NMIS%Allergy_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Allergy_Information:Allergy_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Allergy_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Allergy_Information",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Allergy_Information:Allergy_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Allergy_Information:Allergy_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Allergy_Information:Allergy_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Allergy_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Allergy_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Allergy_Information:Allergy_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Allergy_Information:Allergy_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Medical_Facilities:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Medical_Facilities",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Medical_Facilities:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Medical_Facilities:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Laboratory:Laboratory",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Laboratory",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Laboratory",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Laboratory:Laboratory",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Laboratory:Laboratory"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Vital_Signs:Patient_Vital_Signs",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_Vital_Signs",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Vital_Signs",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_Vital_Signs:Patient_Vital_Signs",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Patient_Vital_Signs:Patient_Vital_Signs"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Nutrition_Management:NMIS/CIS-Essentris%NMIS%Nutrition_Management:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Nutrition_Management:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Nutrition_Management:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Nutrition_Management:NMIS/CIS-Essentris%NMIS%Nutrition_Management:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Room",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Room",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Room",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Room"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Nutrition_Management:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Nutrition_Management",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Nutrition_Management:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Nutrition_Management:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Administration:Patient_Administration",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Administration",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Administration",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Administration:Patient_Administration",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Administration:Patient_Administration"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Room:NMIS/CIS-Essentris%NMIS%Room:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Room:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Room:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Room:NMIS/CIS-Essentris%NMIS%Room:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Demographics_and_Information:Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Room:Room",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Room",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Room:Room",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Room:Room"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Admissions:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Admissions",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Admissions:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%NMIS%Admissions:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Test_Results:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Test_Results:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Patient_Test_Results:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Nutrition_Management:Nutrition_Management",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Nutrition_Management",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Nutrition_Management:Nutrition_Management",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/CIS-Essentris%NMIS%Nutrition_Management:Nutrition_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Encounter_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Order_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Order_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Order_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Order_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-NMIS-Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam):Patient_Notes_(Doctor-Nurse-Procedure-Dental_Exam)"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Provider_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Provider_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Provider_Information:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Provider_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Nutrition_Management/CIS-Essentris:CIS-Essentris%NMIS%Nutrition_Management",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Nutrition_Management",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Nutrition_Management",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Nutrition_Management",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Nutrition_Management/CIS-Essentris:CIS-Essentris%NMIS%Nutrition_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_ID/CIS-Essentris:CIS-Essentris%NMIS%Patient_ID",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Patient_ID",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Patient_ID",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Patient_ID/CIS-Essentris:CIS-Essentris%NMIS%Patient_ID"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Room/CIS-Essentris:CIS-Essentris%NMIS%Room",
+            "source": "http://health.mil/ontologies/Concept/System/CIS-Essentris",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Room",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris:CIS-Essentris%NMIS%Room",
+                "EDGE_TYPE": "CIS-Essentris:CIS-Essentris-NMIS-Room",
+                "URI": "http://health.mil/ontologies/Relation/Provide/CIS-Essentris:CIS-Essentris-NMIS-Room/CIS-Essentris:CIS-Essentris%NMIS%Room"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_ID:NMIS/CIS-Essentris%NMIS%Patient_ID:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/CIS-Essentris%NMIS%Patient_ID",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "CIS-Essentris%NMIS%Patient_ID:NMIS",
+                "EDGE_TYPE": "CIS-Essentris-NMIS-Patient_ID:NMIS",
+                "URI": "http://health.mil/ontologies/Relation/Consume/CIS-Essentris-NMIS-Patient_ID:NMIS/CIS-Essentris%NMIS%Patient_ID:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Orders:Orders",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%NMIS%Orders",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Orders",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%NMIS%Orders:Orders",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%NMIS%Orders:Orders"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Encounter_Information:NMIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/System/NMIS",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-NMIS-Encounter_Information:NMIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-NMIS-Encounter_Information:NMIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Test_Results",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-NMIS-Patient_Test_Results",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Test_Results",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-NMIS-Patient_Test_Results"
+            }
+        }
+    ],
+    "recipe": [],
+    "insightID": "019d8720-0a25-7e48-a911-8e700152ad3f",
+    "title": "How does the composition of this system change over time?",
+    "isPkqlRunnable": false,
+    "dataMakerName": "prerna.ui.components.specific.tap.GraphTimePlaySheet"
+}

@@ -1,0 +1,785 @@
+{
+    "layout": "prerna.ui.components.specific.tap.GraphTimePlaySheet",
+    "pkqlOutput": {
+        "insights": [
+            {
+                "closedPanels": [],
+                "newColumns": {},
+                "dataID": 0,
+                "feData": {},
+                "pkqlData": [],
+                "clear": false,
+                "insightID": "019d73fa-b36d-72b2-9ebe-cae834f814b1",
+                "newInsights": []
+            }
+        ]
+    },
+    "headers": [],
+    "nodes": {
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 17.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-AERO-Patient_Demographics_and_Information%AERO%Consumer%Design",
+                        "gltag": "Consumer"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 15.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-AERO-Patient_Demographics_and_Information%AERO%Consumer%Requirements",
+                        "gltag": "Consumer"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 32.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-AERO-Patient_Demographics_and_Information%AERO%Consumer%Test",
+                        "gltag": "Consumer"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 22.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Patient_Demographics_and_Information%MHS_GENESIS-AERO-Patient_Demographics_and_Information%AERO%Consumer%Develop",
+                        "gltag": "Consumer"
+                    }
+                },
+                "PhysicalName": "MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Vital_Signs": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Vital_Signs",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Vital_Signs",
+                "SystemInterface": 1,
+                "PhysicalName": "Vital_Signs",
+                "VERTEX_LABEL_PROPERTY": "Vital_Signs"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Encounter_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+                "SystemInterface": 1,
+                "PhysicalName": "Encounter_Information",
+                "VERTEX_LABEL_PROPERTY": "Encounter_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MODS%Demographics",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MODS%Demographics",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+                "SystemInterface": 1,
+                "PhysicalName": "Patient_Demographics_and_Information",
+                "VERTEX_LABEL_PROPERTY": "Patient_Demographics_and_Information"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MODS%Vital_Signs",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MODS%Vital_Signs",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Assessments": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+                "SystemInterface": 2,
+                "PhysicalName": "Assessments",
+                "VERTEX_LABEL_PROPERTY": "Assessments"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "Inputs": 3,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+                "SystemInterface": 3,
+                "PhysicalName": "Demographics",
+                "VERTEX_LABEL_PROPERTY": "Demographics"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/MHS_GENESIS": {
+            "uri": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "Inputs": 4,
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+                "SystemInterface": 6,
+                "PhysicalName": "MHS_GENESIS",
+                "Outputs": 2,
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/AERO": {
+            "uri": "http://health.mil/ontologies/Concept/System/AERO",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/AERO",
+                "SystemInterface": 12,
+                "PhysicalName": "AERO",
+                "Outputs": 10,
+                "VERTEX_LABEL_PROPERTY": "AERO"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "MHS_GENESIS%AERO%Demographics",
+                "Outputs": 2,
+                "PhysicalName": "MHS_GENESIS%AERO%Demographics",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/AKO": {
+            "uri": "http://health.mil/ontologies/Concept/System/AKO",
+            "propHash": {
+                "Inputs": 2,
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/AKO",
+                "SystemInterface": 2,
+                "PhysicalName": "AKO",
+                "VERTEX_LABEL_PROPERTY": "AKO"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 72.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Duty-Specific_Physical_Information_and_Status%AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status%AERO%Data_Federation%Design",
+                        "gltag": "Provider"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 50.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Duty-Specific_Physical_Information_and_Status%AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status%AERO%Data_Federation%Requirements",
+                        "gltag": "Provider"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 104.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Duty-Specific_Physical_Information_and_Status%AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status%AERO%Data_Federation%Test",
+                        "gltag": "Provider"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 76.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Duty-Specific_Physical_Information_and_Status%AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status%AERO%Data_Federation%Develop",
+                        "gltag": "Provider"
+                    }
+                },
+                "PhysicalName": "AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Permissions_Management": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Permissions_Management",
+            "propHash": {
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Permissions_Management",
+                "SystemInterface": 1,
+                "PhysicalName": "Permissions_Management",
+                "VERTEX_LABEL_PROPERTY": "Permissions_Management"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MODS%Assessments",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MODS%Assessments",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%AKO%Permissions_Management",
+                "Outputs": 2,
+                "PhysicalName": "AERO%AKO%Permissions_Management",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information",
+            "propHash": {
+                "DataObject": 1,
+                "propUriHash": {},
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO-MHS_GENESIS-Encounter_Information",
+                "Outputs": 2,
+                "timeHash": {
+                    "Design": {
+                        "phase": "Design",
+                        "LOE": 72.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%AERO-MHS_GENESIS-Encounter_Information%AERO%Data_Federation%Design",
+                        "gltag": "Provider"
+                    },
+                    "Requirements": {
+                        "phase": "Requirements",
+                        "LOE": 50.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%AERO-MHS_GENESIS-Encounter_Information%AERO%Data_Federation%Requirements",
+                        "gltag": "Provider"
+                    },
+                    "Test": {
+                        "phase": "Test",
+                        "LOE": 104.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%AERO-MHS_GENESIS-Encounter_Information%AERO%Data_Federation%Test",
+                        "gltag": "Provider"
+                    },
+                    "Develop": {
+                        "phase": "Develop",
+                        "LOE": 76.0,
+                        "dependICDS": "[\"\"]",
+                        "GLitem": "Encounter_Information%AERO-MHS_GENESIS-Encounter_Information%AERO%Data_Federation%Develop",
+                        "gltag": "Provider"
+                    }
+                },
+                "PhysicalName": "AERO-MHS_GENESIS-Encounter_Information",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status": {
+            "uri": "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "Inputs": 3,
+                "VERTEX_COLOR_PROPERTY": "255,127,14",
+                "VERTEX_TYPE_PROPERTY": "DataObject",
+                "URI": "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status",
+                "SystemInterface": 3,
+                "PhysicalName": "Duty-Specific_Physical_Information_and_Status",
+                "VERTEX_LABEL_PROPERTY": "Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%AKO%Demographics",
+                "Outputs": 2,
+                "PhysicalName": "AERO%AKO%Demographics",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments": {
+            "uri": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments",
+            "propHash": {
+                "DataObject": 1,
+                "System": 2,
+                "VERTEX_TYPE_PROPERTY": "SystemInterface",
+                "VERTEX_LABEL_PROPERTY": "AERO%MHS_GENESIS%Assessments",
+                "Outputs": 2,
+                "PhysicalName": "AERO%MHS_GENESIS%Assessments",
+                "URI": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments",
+                "Inputs": 1,
+                "VERTEX_COLOR_PROPERTY": "44,160,44"
+            }
+        },
+        "http://health.mil/ontologies/Concept/System/MODS": {
+            "uri": "http://health.mil/ontologies/Concept/System/MODS",
+            "propHash": {
+                "Inputs": 4,
+                "VERTEX_COLOR_PROPERTY": "31,119,180",
+                "VERTEX_TYPE_PROPERTY": "System",
+                "URI": "http://health.mil/ontologies/Concept/System/MODS",
+                "SystemInterface": 4,
+                "PhysicalName": "MODS",
+                "VERTEX_LABEL_PROPERTY": "MODS"
+            }
+        }
+    },
+    "data": [
+        []
+    ],
+    "edges": [
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Assessments:MODS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/System/MODS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Assessments:MODS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Assessments:MODS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Assessments",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MODS%Assessments",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO-MHS_GENESIS-Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO-MHS_GENESIS-Encounter_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO-MHS_GENESIS-Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%AKO%Permissions_Management",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%AKO%Permissions_Management",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%AKO%Permissions_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%AKO%Demographics:Demographics",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "EDGE_NAME": "AERO%AKO%Demographics:Demographics",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%AKO%Demographics:Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:MHS_GENESIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "EDGE_NAME": "AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:MHS_GENESIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:MHS_GENESIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%AKO%Demographics:AKO",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics",
+            "target": "http://health.mil/ontologies/Concept/System/AKO",
+            "propHash": {
+                "EDGE_NAME": "AERO%AKO%Demographics:AKO",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%AKO%Demographics:AKO"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Vital_Signs:MODS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs",
+            "target": "http://health.mil/ontologies/Concept/System/MODS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Vital_Signs:MODS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Vital_Signs:MODS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Vital_Signs:Vital_Signs",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Vital_Signs",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Vital_Signs:Vital_Signs",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Vital_Signs:Vital_Signs"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Duty-Specific_Physical_Information_and_Status:MODS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/System/MODS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Duty-Specific_Physical_Information_and_Status:MODS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Duty-Specific_Physical_Information_and_Status:MODS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-AERO-Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-AERO-Patient_Demographics_and_Information:Patient_Demographics_and_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS-AERO-Patient_Demographics_and_Information:Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MHS_GENESIS%Assessments:Assessments",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+            "propHash": {
+                "EDGE_NAME": "AERO%MHS_GENESIS%Assessments:Assessments",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MHS_GENESIS%Assessments:Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%AERO%Demographics:Demographics",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%AERO%Demographics:Demographics",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/MHS_GENESIS%AERO%Demographics:Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Vital_Signs",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Vital_Signs",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MODS%Vital_Signs",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Vital_Signs"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Assessments:Assessments",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Assessments",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Assessments:Assessments",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Assessments:Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Demographics:MODS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics",
+            "target": "http://health.mil/ontologies/Concept/System/MODS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Demographics:MODS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MODS%Demographics:MODS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS-AERO-Patient_Demographics_and_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO-MHS_GENESIS-Encounter_Information:MHS_GENESIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "EDGE_NAME": "AERO-MHS_GENESIS-Encounter_Information:MHS_GENESIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO-MHS_GENESIS-Encounter_Information:MHS_GENESIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Demographics",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MODS%Demographics",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MHS_GENESIS%Assessments",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MHS_GENESIS%Assessments",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MHS_GENESIS%Assessments"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MODS%Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%AKO%Demographics",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Demographics",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%AKO%Demographics",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%AKO%Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MHS_GENESIS%Assessments:MHS_GENESIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Assessments",
+            "target": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MHS_GENESIS%Assessments:MHS_GENESIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MHS_GENESIS%Assessments:MHS_GENESIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO-MHS_GENESIS-Duty-Specific_Physical_Information_and_Status:Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:MHS_GENESIS",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+            "target": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "propHash": {
+                "EDGE_NAME": "AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:MHS_GENESIS",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status:MHS_GENESIS"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO-MHS_GENESIS-Encounter_Information:Encounter_Information",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO-MHS_GENESIS-Encounter_Information",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Encounter_Information",
+            "propHash": {
+                "EDGE_NAME": "AERO-MHS_GENESIS-Encounter_Information:Encounter_Information",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO-MHS_GENESIS-Encounter_Information:Encounter_Information"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%AERO%Demographics:AERO",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics",
+            "target": "http://health.mil/ontologies/Concept/System/AERO",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS%AERO%Demographics:AERO",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS%AERO%Demographics:AERO"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+            "source": "http://health.mil/ontologies/Concept/System/AERO",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+            "propHash": {
+                "EDGE_NAME": "AERO:AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/AERO:AERO%MHS_GENESIS%Duty-Specific_Physical_Information_and_Status"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/AERO%AKO%Permissions_Management:AKO",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management",
+            "target": "http://health.mil/ontologies/Concept/System/AKO",
+            "propHash": {
+                "EDGE_NAME": "AERO%AKO%Permissions_Management:AKO",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/AERO%AKO%Permissions_Management:AKO"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-AERO-Patient_Demographics_and_Information:AERO",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS-AERO-Patient_Demographics_and_Information",
+            "target": "http://health.mil/ontologies/Concept/System/AERO",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS-AERO-Patient_Demographics_and_Information:AERO",
+                "EDGE_TYPE": "Consume",
+                "URI": "http://health.mil/ontologies/Relation/Consume/MHS_GENESIS-AERO-Patient_Demographics_and_Information:AERO"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%AKO%Permissions_Management:Permissions_Management",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%AKO%Permissions_Management",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Permissions_Management",
+            "propHash": {
+                "EDGE_NAME": "AERO%AKO%Permissions_Management:Permissions_Management",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%AKO%Permissions_Management:Permissions_Management"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%AERO%Demographics",
+            "source": "http://health.mil/ontologies/Concept/System/MHS_GENESIS",
+            "target": "http://health.mil/ontologies/Concept/SystemInterface/MHS_GENESIS%AERO%Demographics",
+            "propHash": {
+                "EDGE_NAME": "MHS_GENESIS:MHS_GENESIS%AERO%Demographics",
+                "EDGE_TYPE": "Provide",
+                "URI": "http://health.mil/ontologies/Relation/Provide/MHS_GENESIS:MHS_GENESIS%AERO%Demographics"
+            }
+        },
+        {
+            "uri": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Demographics:Demographics",
+            "source": "http://health.mil/ontologies/Concept/SystemInterface/AERO%MODS%Demographics",
+            "target": "http://health.mil/ontologies/Concept/DataObject/Demographics",
+            "propHash": {
+                "EDGE_NAME": "AERO%MODS%Demographics:Demographics",
+                "EDGE_TYPE": "Payload",
+                "URI": "http://health.mil/ontologies/Relation/Payload/AERO%MODS%Demographics:Demographics"
+            }
+        }
+    ],
+    "recipe": [],
+    "insightID": "019d73fa-b36d-72b2-9ebe-cae834f814b1",
+    "title": "How does the composition of this system change over time?",
+    "isPkqlRunnable": false,
+    "dataMakerName": "prerna.ui.components.specific.tap.GraphTimePlaySheet"
+}
