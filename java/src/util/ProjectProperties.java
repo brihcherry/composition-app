@@ -23,8 +23,12 @@ public class ProjectProperties {
 
   private static ProjectProperties INSTANCE = null;
 
-  // TODO: Add a field for each property you want to expose, e.g.:
-  //   private String engineId;
+  // TAP_Core_Data — base graph CONSTRUCT + Q3/Q4 BoS time overlays
+  private String baseEngineId;
+  // FutureDB — project core engine + Q2 ProposedDecommissioned overlay
+  private String decommissionEngineId;
+  // FutureCostDB — Q1 TransitionGLItem / LOE overlay
+  private String transitionEngineId;
 
   private ProjectProperties() {}
 
@@ -56,8 +60,9 @@ public class ProjectProperties {
       Properties projectProperties = new Properties();
       projectProperties.load(fileIn);
 
-      // TODO: Read properties and assign to fields, e.g.:
-      //   newInstance.engineId = projectProperties.getProperty("engineId");
+      newInstance.baseEngineId = projectProperties.getProperty("baseEngineId");
+      newInstance.decommissionEngineId = projectProperties.getProperty("decommissionEngineId");
+      newInstance.transitionEngineId = projectProperties.getProperty("transitionEngineId");
 
       INSTANCE = newInstance;
     } catch (IOException e) {
@@ -66,7 +71,8 @@ public class ProjectProperties {
     }
   }
 
-  // TODO: Add getters for each property, e.g.:
-  //   public String getEngineId() { return engineId; }
+  public String getBaseEngineId() { return baseEngineId; }
+  public String getDecommissionEngineId() { return decommissionEngineId; }
+  public String getTransitionEngineId() { return transitionEngineId; }
 
 }
