@@ -5,13 +5,19 @@
 // Three map modes: Initial (legacy), Transition (migration in progress), Final (new system)
 
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
+import { runPixel } from "@semoss/sdk";
+import { useInsight } from "@semoss/sdk/react";
 import { TimelineGraph } from "@/components/TimelineGraph";
 import { GraphTooltip } from "@/components/GraphTooltip";
 import { GraphLegend } from "@/components/GraphLegend";
 import { getTimeGraphData } from "@/lib/timeGraphData";
 import type { TooltipData } from "@/types/graph";
 import type { RawTimeGraphData, TimeNode } from "@/types/timeGraph";
-import compositionData from "@/data/composition_time_data.json";
+
+interface SystemOption {
+	uri: string;
+	label: string;
+}
 
 type MapMode = "initial" | "transition" | "final";
 
@@ -95,12 +101,89 @@ function needsLightText(color: string): boolean {
 }
 
 export const CompositionTimelinePage = () => {
+	const { insightId } = useInsight();
 	const [tooltip, setTooltip] = useState<TooltipData | null>(null);
 	const [mapMode, setMapMode] = useState<MapMode>("initial");
 	const [loeThreshold, setLoeThreshold] = useState(0);
 	const [hideLabels, setHideLabels] = useState(false);
 	const [sidebarWidth, setSidebarWidth] = useState(320);
 	const isResizing = useRef(false);
+
+	// System selector state
+	const [systems, setSystems] = useState<SystemOption[]>([]);
+	const [isLoadingSystems, setIsLoadingSystems] = useState(true);
+	const [systemsError, setSystemsError] = useState<string | null>(null);
+	const [selectedSystem, setSelectedSystem] = useState<SystemOption | null>(null);
+
+	// Graph data state (reactor-backed)
+	const [rawGraphData, setRawGraphData] = useState<RawTimeGraphData | null>(null);
+	const [isLoadingGraph, setIsLoadingGraph] = useState(false);
+	const [graphError, setGraphError] = useState<string | null>(null);
+
+	// ── Phase 1: Fetch ActiveSystem list on mount ────────────────────────────
+	useEffect(() => {
+		if (!insightId) return;
+		let cancelled = false;
+
+		const pixel = `ListActiveSystems();`;
+		setIsLoadingSystems(true);
+		setSystemsError(null);
+
+		runPixel(pixel, insightId)
+			.then((response) => {
+				if (cancelled) return;
+				if (response.errors.length > 0) {
+					setSystemsError(response.errors.join(", "));
+					return;
+				}
+				const output = response.pixelReturn[0]?.output;
+				if (Array.isArray(output)) {
+					setSystems(output as SystemOption[]);
+				}
+			})
+			.catch((err) => {
+				if (!cancelled) {
+					setSystemsError(err instanceof Error ? err.message : "Failed to load systems");
+				}
+			})
+			.finally(() => { if (!cancelled) setIsLoadingSystems(false); });
+
+		return () => { cancelled = true; };
+	}, [insightId]);
+
+	// ── Phase 2: Fetch graph data when a system is selected ──────────────────
+	useEffect(() => {
+		if (!insightId || !selectedSystem) return;
+		let cancelled = false;
+
+		const pixel = `GetCompositionTimeline(systemUri=["${selectedSystem.uri}"]);`;
+		setIsLoadingGraph(true);
+		setGraphError(null);
+		setRawGraphData(null);
+
+		runPixel(pixel, insightId)
+			.then((response) => {
+				if (cancelled) return;
+				if (response.errors.length > 0) {
+					setGraphError(response.errors.join(", "));
+					return;
+				}
+				const output = response.pixelReturn[0]?.output as RawTimeGraphData;
+				if (output && output.nodes && output.edges) {
+					setRawGraphData(output);
+				} else {
+					setGraphError("Unexpected response format from server");
+				}
+			})
+			.catch((err) => {
+				if (!cancelled) {
+					setGraphError(err instanceof Error ? err.message : "Failed to load graph");
+				}
+			})
+			.finally(() => { if (!cancelled) setIsLoadingGraph(false); });
+
+		return () => { cancelled = true; };
+	}, [insightId, selectedSystem]);
 
 	// Drag-to-resize left sidebar
 	const handleResizeStart = useCallback((e: React.MouseEvent) => {
@@ -123,12 +206,13 @@ export const CompositionTimelinePage = () => {
 	}, []);
 
 	const graphData = useMemo(
-		() => getTimeGraphData(compositionData as unknown as RawTimeGraphData),
-		[],
+		() => rawGraphData ? getTimeGraphData(rawGraphData) : null,
+		[rawGraphData],
 	);
 
 	/** Max cumulative LOE across all LOE nodes (slider upper bound). */
 	const maxLOE = useMemo(() => {
+		if (!graphData) return 100;
 		let max = 0;
 		for (const node of graphData.nodes) {
 			if (!isLOENode(node) || !node.timeHash) continue;
@@ -148,6 +232,7 @@ export const CompositionTimelinePage = () => {
 	}, []);
 
 	const { visibleNodes, visibleEdges } = useMemo(() => {
+		if (!graphData) return { visibleNodes: [], visibleEdges: [] };
 		let filteredNodes: TimeNode[];
 
 		if (mapMode === "initial") {
@@ -206,11 +291,36 @@ export const CompositionTimelinePage = () => {
 		<div className="flex flex-col h-full">
 			{/* Header */}
 			<header className="shrink-0 border-b border-gray-200 bg-white px-6 py-3">
-				<h1 className="text-lg font-semibold text-gray-900">
-					{graphData.title}
-				</h1>
+				<div className="flex items-center gap-4">
+					<h1 className="text-lg font-semibold text-gray-900 shrink-0">
+						{graphData?.title ?? "How does the composition of this system change over time?"}
+					</h1>
+					{/* System selector */}
+					<select
+						className="ml-auto border border-gray-300 rounded px-2 py-1 text-sm text-gray-700 bg-white disabled:opacity-50"
+						value={selectedSystem?.uri ?? ""}
+						onChange={(e) => {
+							const found = systems.find((s) => s.uri === e.target.value);
+							setSelectedSystem(found ?? null);
+						}}
+						disabled={isLoadingSystems}
+					>
+						<option value="">
+							{isLoadingSystems ? "Loading systems…" : systemsError ? "Error loading systems" : "Select a system…"}
+						</option>
+						{systems.map((s) => (
+							<option key={s.uri} value={s.uri}>{s.label}</option>
+						))}
+					</select>
+				</div>
 				<p className="text-sm text-gray-500 mt-0.5">
-					{visibleNodes.length} nodes &middot; {visibleEdges.length} edges
+					{isLoadingGraph
+						? "Loading graph…"
+						: graphError
+						? `Error: ${graphError}`
+						: graphData
+						? `${visibleNodes.length} nodes · ${visibleEdges.length} edges`
+						: "Select a system to load the timeline graph"}
 				</p>
 			</header>
 
@@ -325,16 +435,26 @@ export const CompositionTimelinePage = () => {
 
 				{/* Center: Graph */}
 				<div className="flex-1 relative">
-					<TimelineGraph
-						nodes={visibleNodes}
-						edges={visibleEdges}
-						selectedPhase={null}
-						colorOverrides={colorOverrides}
-						hideLabels={hideLabels}
-						onTooltipChange={handleTooltipChange}
-					/>
-					<GraphLegend entries={graphData.legend} />
-					<GraphTooltip tooltip={tooltip} />
+					{isLoadingGraph ? (
+						<div className="flex items-center justify-center h-full text-gray-400 text-sm">Loading graph…</div>
+					) : graphError ? (
+						<div className="flex items-center justify-center h-full text-red-500 text-sm">{graphError}</div>
+					) : !graphData ? (
+						<div className="flex items-center justify-center h-full text-gray-400 text-sm">Select a system above to view the timeline graph.</div>
+					) : (
+						<>
+							<TimelineGraph
+								nodes={visibleNodes}
+								edges={visibleEdges}
+								selectedPhase={null}
+								colorOverrides={colorOverrides}
+								hideLabels={hideLabels}
+								onTooltipChange={handleTooltipChange}
+							/>
+							<GraphLegend entries={graphData.legend} />
+							<GraphTooltip tooltip={tooltip} />
+						</>
+					)}
 				</div>
 
 				{/* Right Sidebar — Controls */}
@@ -419,7 +539,7 @@ export const CompositionTimelinePage = () => {
 								New Interfaces
 							</div>
 							<div className="space-y-0.5 overflow-y-auto pr-0.5" style={{ maxHeight: 180 }}>
-								{graphData.nodes
+								{(graphData?.nodes ?? [])
 									.filter(
 										(n) =>
 											isLOENode(n) &&
