@@ -12,7 +12,6 @@ import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { CompositionTimelinePage } from "./CompositionTimelinePage";
 import { DebugComparisonPage } from "./DebugComparisonPage";
 import { ErrorPage } from "./ErrorPage";
-import { HomePage } from "./HomePage";
 import { InitializedLayout } from "./layouts";
 
 const router = createHashRouter([
@@ -23,10 +22,6 @@ const router = createHashRouter([
 		children: [
 			{
 				index: true,
-				Component: HomePage,
-			},
-			{
-				path: '/composition-timeline',
 				Component: CompositionTimelinePage,
 			},
 			{

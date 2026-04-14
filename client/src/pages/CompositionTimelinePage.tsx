@@ -52,19 +52,19 @@ const PHASE_ORDER_LOE = ["Requirements", "Design", "Develop", "Test"] as const;
 /** Fill colors from cream (not started) to dark green (all done). */
 const LOE_COLORS = [
 	"#FFFBEB", // not started — cream
-	"#D1FAE5", // Requirements done — emerald-100
-	"#6EE7B7", // Design done — emerald-300
-	"#10B981", // Develop done — emerald-500
-	"#065F46", // All done — emerald-900
+	"#c3e4c8", // Requirements done — emerald-100
+	"#87b98f", // Design done — emerald-300
+	"#60ac6e", // Develop done — emerald-500
+	"#048219", // All done — emerald-900
 ] as const;
 
 /** Stroke colors paired with LOE_COLORS (same index). */
 const LOE_STROKES = [
 	"#c9a84c", // amber
-	"#059669", // emerald-600
-	"#047857", // emerald-700
-	"#064E3B", // emerald-900
-	"#022c22", // near-black green
+	"#c3e4c8", // emerald-600
+	"#87b98f", // emerald-700
+	"#60ac6e", // emerald-900
+	"#048219", // near-black green
 ] as const;
 
 /** Compute fill color for a transition LOE node based on current slider threshold. */

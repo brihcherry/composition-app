@@ -2,8 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { SemossBlueLogo } from "@/assets";
 
 const navigationLinks: { path: string; text: string }[] = [
-	{ path: "/", text: "Network of Systems" },
-	{ path: "/composition-timeline", text: "Composition Over Time" },
+	{ path: "/", text: "Composition Over Time" },
 	{ path: "/debug-comparison", text: "Debug Comparison" },
 ];
 
@@ -26,7 +25,7 @@ export const MainNavigation = () => {
 							className="h-10"
 						/>
 						<span className="text-lg font-bold text-gray-900 whitespace-nowrap">
-							Network of Systems
+							Composition Over Time
 						</span>
 					</button>
 
