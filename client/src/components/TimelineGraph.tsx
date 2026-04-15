@@ -29,6 +29,15 @@ const TRANSITION_MS = 400;
 
 /** Maps LOE/transition fill colors to appropriate border strokes. Falls back to white. */
 const STROKE_MAP: Record<string, string> = {
+	// Legacy phase colors (from network-timeline.css)
+	"#ECF6BD": "#b8c99a", // Requirements → darker yellow-green
+	"#C5E5A0": "#97b87a", // Design → darker green
+	"#9FD483": "#7ab55e", // Develop → darker green
+	"#79C366": "#5a9f48", // Test → darker green
+	"#52B149": "#3d8a35", // Deploy → darker green
+	"#2CA02C": "#1f7a1f", // Completed → dark green
+	"#FF0000": "#B91C1C", // Decommissioned → dark red
+	// Original gradient colors (backwards compatibility)
 	"#FFFBEB": "#c9a84c", // cream → amber
 	"#D1FAE5": "#059669", // emerald-100 → emerald-600
 	"#6EE7B7": "#047857", // emerald-300 → emerald-700
