@@ -11,6 +11,7 @@
 import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { CompositionTimelinePage } from "./CompositionTimelinePage";
 import { DebugComparisonPage } from "./DebugComparisonPage";
+import { DebugSparqlPage } from "./DebugSparqlPage";
 import { DebugTimelineComparisonPage } from "./DebugTimelineComparisonPage";
 import { ErrorPage } from "./ErrorPage";
 import { InitializedLayout } from "./layouts";
@@ -32,6 +33,10 @@ const router = createHashRouter([
 			{
 				path: '/debug-timeline-comparison',
 				Component: DebugTimelineComparisonPage,
+			},
+			{
+				path: '/debug-sparql',
+				Component: DebugSparqlPage,
 			},
 			{
 				// Catch-all: redirect unknown routes to home

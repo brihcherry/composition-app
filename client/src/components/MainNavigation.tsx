@@ -4,6 +4,7 @@ import { SemossBlueLogo } from "@/assets";
 const navigationLinks: { path: string; text: string }[] = [
 	{ path: "/", text: "Composition Over Time" },
 	{ path: "/debug-comparison", text: "Debug Comparison" },
+	{ path: "/debug-sparql", text: "SPARQL Inspector" },
 ];
 
 export const MainNavigation = () => {

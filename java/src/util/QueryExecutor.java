@@ -9,8 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import prerna.engine.api.IDatabaseEngine;
-import prerna.engine.api.IHeadersDataRow;
-import prerna.engine.api.IRawSelectWrapper;
+import prerna.engine.api.ISelectStatement;
+import prerna.engine.api.ISelectWrapper;
 import prerna.masterdatabase.utility.MasterDatabaseUtility;
 import prerna.rdf.engine.wrappers.WrapperManager;
 import prerna.util.Utility;
@@ -53,8 +53,8 @@ public class QueryExecutor {
 
   /**
    * Execute a SPARQL SELECT query and return results as a list of row maps.
-   * Each row is a Map where keys are SPARQL variable names and values are
-   * the bound URIs or literals.
+    * Uses the legacy select wrapper path so row values mirror the playsheet
+    * behavior more closely than the raw wrapper path.
    */
   public List<Map<String, String>> executeSelect(String query) {
     List<Map<String, String>> results = new ArrayList<>();
@@ -63,17 +63,17 @@ public class QueryExecutor {
       throw new IllegalArgumentException("Query cannot be null or empty");
     }
 
-    IRawSelectWrapper wrapper = null;
+    ISelectWrapper wrapper = null;
     try {
       LOGGER.debug("Executing SPARQL query against engine: " + engineId);
 
-      wrapper = WrapperManager.getInstance().getRawWrapper(engine, query);
+      wrapper = WrapperManager.getInstance().getSWrapper(engine, query);
 
       if (wrapper == null) {
         throw new RuntimeException("Failed to obtain query wrapper from WrapperManager");
       }
 
-      String[] variableNames = wrapper.getHeaders();
+      String[] variableNames = wrapper.getVariables();
 
       if (variableNames == null || variableNames.length == 0) {
         LOGGER.warn("Query returned no variables. Query: " + query);
@@ -81,20 +81,15 @@ public class QueryExecutor {
       }
 
       while (wrapper.hasNext()) {
-        IHeadersDataRow statement = wrapper.next();
+        ISelectStatement statement = wrapper.next();
         Map<String, String> row = new TreeMap<>();
-        Object[] values = statement.getRawValues();
-        if (values == null) {
-          values = statement.getValues();
-        }
 
-        for (int i = 0; i < variableNames.length; i++) {
-          if (values == null || i >= values.length) {
-            continue;
-          }
-          Object value = values[i];
+        for (String variableName : variableNames) {
+          Object rawValue = statement.getRawVar(variableName);
+          Object displayValue = statement.getVar(variableName);
+          String value = chooseValue(rawValue, displayValue);
           if (value != null) {
-            row.put(variableNames[i], value.toString());
+            row.put(variableName, value);
           }
         }
 
@@ -113,12 +108,34 @@ public class QueryExecutor {
         try {
           wrapper.close();
         } catch (Exception closeEx) {
-          LOGGER.warn("Failed to close raw query wrapper cleanly", closeEx);
+          LOGGER.warn("Failed to close select query wrapper cleanly", closeEx);
         }
       }
     }
 
     return results;
+  }
+
+  private String chooseValue(Object rawValue, Object displayValue) {
+    if (rawValue != null) {
+      String rawText = rawValue.toString();
+      if (looksLikeUri(rawText)) {
+        return rawText;
+      }
+    }
+
+    if (displayValue != null) {
+      return displayValue.toString();
+    }
+
+    return rawValue != null ? rawValue.toString() : null;
+  }
+
+  private boolean looksLikeUri(String value) {
+    return value.startsWith("http://")
+        || value.startsWith("https://")
+        || value.startsWith("urn:")
+        || value.startsWith("file:");
   }
 
   public IDatabaseEngine getEngine() {

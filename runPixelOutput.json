@@ -1,0 +1,32 @@
+
+{
+    "insightID": "019d91e3-5324-7121-9a27-1d29c8753bc2",
+    "pixelReturn": [
+        {
+            "pixelId": "3",
+            "pixelExpression": "GetCompositionTimeline ( systemUri = [ \"http://health.mil/ontologies/Concept/System/ACS_DAL\" ] ) ;",
+            "isMeta": false,
+            "timeToRun": 178,
+            "output": {
+                "nodes": {
+                    "http://health.mil/ontologies/Concept/System/ACS_DAL": {
+                        "propHash": {
+                            "PhysicalName": "ACS_DAL",
+                            "VERTEX_TYPE_PROPERTY": "System",
+                            "VERTEX_COLOR_PROPERTY": "31,119,180",
+                            "VERTEX_LABEL_PROPERTY": "ACS DAL",
+                            "URI": "http://health.mil/ontologies/Concept/System/ACS_DAL"
+                        },
+                        "uri": "http://health.mil/ontologies/Concept/System/ACS_DAL"
+                    }
+                },
+                "edges": [],
+                "layout": "prerna.ui.components.specific.tap.GraphTimePlaySheet",
+                "title": "How does the composition of this system change over time?",
+                "dataMakerName": "GraphTimePlaySheet"
+            },
+            "operationType": [
+                "OPERATION"
+            ]
+        }
+    ]
