@@ -14,6 +14,7 @@ interface TimelineGraphProps {
 	selectedPhase: string | null; // null = show all
 	colorOverrides?: Map<string, string>; // nodeId → fill color (applied without re-init)
 	hideLabels?: boolean;
+	hideInterfaceLabels?: boolean;
 	onTooltipChange: (tooltip: TooltipData | null) => void;
 }
 
@@ -56,6 +57,7 @@ export const TimelineGraph = ({
 	selectedPhase,
 	colorOverrides,
 	hideLabels = false,
+	hideInterfaceLabels = false,
 	onTooltipChange,
 }: TimelineGraphProps) => {
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -73,6 +75,9 @@ export const TimelineGraph = ({
 
 	const hideLabelsRef = useRef(hideLabels);
 	hideLabelsRef.current = hideLabels;
+
+	const hideInterfaceLabelsRef = useRef(hideInterfaceLabels);
+	hideInterfaceLabelsRef.current = hideInterfaceLabels;
 
 	/** Determine if a node is "active" for the selected phase. */
 	const isNodeActiveForPhase = useCallback(
@@ -207,7 +212,11 @@ export const TimelineGraph = ({
 			.attr("font-size", `${LABEL_FONT_SIZE}px`)
 			.attr("fill", "#333")
 			.attr("pointer-events", "none")
-			.attr("display", hideLabelsRef.current ? "none" : null);
+			.attr("display", (d) =>
+				hideLabelsRef.current || (hideInterfaceLabelsRef.current && d.type === "SystemInterface")
+					? "none"
+					: null,
+			);
 
 		// Node hover
 		nodeGroup
@@ -356,12 +365,14 @@ export const TimelineGraph = ({
 			.attr("stroke", (d) => getNodeStroke(overrides?.get(d.id) ?? d.color));
 	}, [colorOverrides]);
 
-	// Toggle label visibility without re-init
+	// Toggle all-label visibility without re-init
 	useEffect(() => {
 		const nodeGroup = nodeGroupRef.current;
 		if (!nodeGroup) return;
-		nodeGroup.selectAll("text").attr("display", hideLabels ? "none" : null);
-	}, [hideLabels]);
+		nodeGroup.selectAll<SVGTextElement, TimeNode>("text").attr("display", (d) =>
+			hideLabels || (hideInterfaceLabels && d.type === "SystemInterface") ? "none" : null,
+		);
+	}, [hideLabels, hideInterfaceLabels]);
 
 	// Apply phase-based highlighting when selectedPhase changes
 	useEffect(() => {

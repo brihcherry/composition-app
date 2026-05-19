@@ -44,9 +44,11 @@ export const GraphTooltip = ({ tooltip }: GraphTooltipProps) => {
 						{tooltip.sourceLabel}
 					</div>
 					<div className="text-gray-300">→ {tooltip.targetLabel}</div>
+				{tooltip.edge.edgeType.toLowerCase() !== "payload" && (
 					<div className="text-gray-400 text-[10px] uppercase tracking-wide mt-1">
 						{tooltip.edge.edgeType}
 					</div>
+				)}
 					{tooltip.edge.data && (
 						<div className="mt-1">
 							<span className="text-gray-400">Data:</span>{" "}
