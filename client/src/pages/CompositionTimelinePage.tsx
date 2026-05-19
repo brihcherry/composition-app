@@ -266,6 +266,7 @@ export const CompositionTimelinePage = () => {
 	const [mapMode, setMapMode] = useState<MapMode>("initial");
 	const [loeThreshold, setLoeThreshold] = useState(0);
 	const [hideLabels, setHideLabels] = useState(false);
+	const [hideInterfaceLabels, setHideInterfaceLabels] = useState(false);
 	const [sidebarWidth, setSidebarWidth] = useState(360);
 	const isResizing = useRef(false);
 
@@ -445,14 +446,15 @@ export const CompositionTimelinePage = () => {
 			(e) => visibleIds.has(e.sourceId) && visibleIds.has(e.targetId),
 		);
 
-		// Second pass: remove non-System nodes that have no remaining edges (stranded DataObjects/Interfaces)
+		// Second pass: remove ALL stranded nodes (including Systems) that have no remaining edges,
+		// except always keep the focal (selected) system so it anchors the graph.
 		const connectedIds = new Set<string>();
 		for (const e of filteredEdges) {
 			connectedIds.add(e.sourceId);
 			connectedIds.add(e.targetId);
 		}
 		filteredNodes = filteredNodes.filter(
-			(n) => n.type === "System" || connectedIds.has(n.id),
+			(n) => n.id === selectedSystem?.uri || connectedIds.has(n.id),
 		);
 
 		// Re-filter edges in case the second pass removed any nodes
@@ -462,7 +464,7 @@ export const CompositionTimelinePage = () => {
 		);
 
 		return { visibleNodes: filteredNodes, visibleEdges: filteredEdges };
-	}, [mapMode, graphData]);
+	}, [mapMode, graphData, selectedSystem]);
 
 	// ── Color overrides (transition mode: legacy phase colors) ───────────────
 
@@ -543,27 +545,29 @@ export const CompositionTimelinePage = () => {
 		<div className="flex flex-col h-full">
 			{/* Header */}
 			<header className="shrink-0 border-b border-gray-200 bg-white px-6 py-3">
-				<div className="flex items-center gap-4">
-					<h1 className="text-lg font-semibold text-gray-900 shrink-0">
+				<div className="flex flex-wrap items-center justify-between gap-4 relative w-full min-h-[2rem]">
+					<h1 className="text-lg font-semibold text-gray-900 shrink-0 z-10">
 						{graphData?.title ?? "How does the composition of this system change over time?"}
 					</h1>
 					{/* System selector */}
-					<select
-						className="ml-auto border border-gray-300 rounded px-2 py-1 text-sm text-gray-700 bg-white disabled:opacity-50"
-						value={selectedSystem?.uri ?? ""}
-						onChange={(e) => {
-							const found = systems.find((s) => s.uri === e.target.value);
-							setSelectedSystem(found ?? null);
-						}}
-						disabled={isLoadingSystems}
-					>
-						<option value="">
-							{isLoadingSystems ? "Loading systems…" : systemsError ? "Error loading systems" : "Select a system…"}
-						</option>
-						{systems.map((s) => (
-							<option key={s.uri} value={s.uri}>{s.label}</option>
-						))}
-					</select>
+					<div className="shrink-0 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-max">
+						<select
+							className="border border-gray-300 rounded px-2 py-1 text-sm text-gray-700 bg-white disabled:opacity-50"
+							value={selectedSystem?.uri ?? ""}
+							onChange={(e) => {
+								const found = systems.find((s) => s.uri === e.target.value);
+								setSelectedSystem(found ?? null);
+							}}
+							disabled={isLoadingSystems}
+						>
+							<option value="">
+								{isLoadingSystems ? "Loading systems…" : systemsError ? "Error loading systems" : "Select a system…"}
+							</option>
+							{systems.map((s) => (
+								<option key={s.uri} value={s.uri}>{s.label}</option>
+							))}
+						</select>
+					</div>
 				</div>
 				<p className="text-sm text-gray-500 mt-0.5">
 					{isLoadingGraph
@@ -668,6 +672,7 @@ export const CompositionTimelinePage = () => {
 								selectedPhase={null}
 								colorOverrides={colorOverrides}
 								hideLabels={hideLabels}
+								hideInterfaceLabels={hideInterfaceLabels}
 								onTooltipChange={handleTooltipChange}
 							/>
 							<GraphLegend entries={graphData.legend} />
@@ -694,7 +699,7 @@ export const CompositionTimelinePage = () => {
 						<h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
 							Update State
 						</h2>
-						<label className="flex items-center gap-2 text-sm text-gray-700 mb-3 cursor-pointer select-none">
+						<label className="flex items-center gap-2 text-sm text-gray-700 mb-2 cursor-pointer select-none">
 							<input
 								type="checkbox"
 								checked={hideLabels}
@@ -702,6 +707,15 @@ export const CompositionTimelinePage = () => {
 								className="accent-blue-600 w-3.5 h-3.5"
 							/>
 							Hide labels
+						</label>
+						<label className="flex items-center gap-2 text-sm text-gray-700 mb-3 cursor-pointer select-none">
+							<input
+								type="checkbox"
+								checked={hideInterfaceLabels}
+								onChange={(e) => setHideInterfaceLabels(e.target.checked)}
+								className="accent-violet-600 w-3.5 h-3.5"
+							/>
+							Hide interface labels
 						</label>
 						<div className="flex flex-col gap-2">
 							{(["initial", "transition", "final"] as MapMode[]).map((mode) => (
