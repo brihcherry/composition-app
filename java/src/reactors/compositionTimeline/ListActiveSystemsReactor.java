@@ -2,8 +2,10 @@ package reactors.compositionTimeline;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,13 +18,10 @@ import util.QueryExecutor;
 /**
  * Returns the list of ActiveSystem nodes from FutureDB for use in the system selector dropdown.
  *
- * <p>Replicates the legacy PARAM query for insight #21 (FutureDB:Time-Perspective:T1):
- * <pre>
- *   SELECT ?entity WHERE {
- *     ?entity &lt;rdf:type&gt; &lt;http://semoss.org/ontologies/Concept/ActiveSystem&gt; ;
- *   }
- * </pre>
- * which runs on the FutureDB core engine (decommissionEngineId in project.properties).
+ * <p>Queries TAP_Core_Data (baseEngineId) for ActiveSystem instances (which are declared in its
+ * OWL), then cross-references against FutureDB (decommissionEngineId) System instances, returning
+ * only systems present in both. This is resilient to FutureDB loader-sheet round-trips, which
+ * silently drop ActiveSystem type triples because ActiveSystem is not declared in FutureDB's OWL.
  *
  * <p>Pixel call:
  * <pre>
@@ -46,33 +45,55 @@ public class ListActiveSystemsReactor extends AbstractProjectReactor {
 
   @Override
   protected NounMetadata doExecute() {
-    // FutureDB is the core engine for this project and owns the ActiveSystem list
-    String engineId = projectProperties.getDecommissionEngineId();
-    if (engineId == null || engineId.trim().isEmpty()) {
+    String futureDbId = projectProperties.getDecommissionEngineId();
+    String tapCoreId = projectProperties.getBaseEngineId();
+
+    if (futureDbId == null || futureDbId.trim().isEmpty()) {
       throw new IllegalStateException("decommissionEngineId is not configured in project.properties");
     }
+    if (tapCoreId == null || tapCoreId.trim().isEmpty()) {
+      throw new IllegalStateException("baseEngineId is not configured in project.properties");
+    }
 
-    LOGGER.info("ListActiveSystems: querying engine={}", engineId);
+    LOGGER.info("ListActiveSystems: querying TAP_Core_Data={} for active names, FutureDB={} for system URIs", tapCoreId, futureDbId);
 
-    String query =
+    // Step 1: Get ActiveSystem local names from TAP_Core_Data (which declares ActiveSystem in its OWL)
+    String activeQuery =
         "SELECT DISTINCT ?System WHERE {"
         + " ?System <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         + "   <" + CONCEPT_ACTIVE_SYSTEM + "> ."
         + "}";
+    QueryExecutor tapExecutor = new QueryExecutor(tapCoreId);
+    List<Map<String, String>> activeRows = tapExecutor.executeSelect(activeQuery);
 
-    QueryExecutor executor = new QueryExecutor(engineId);
-    List<Map<String, String>> rows = executor.executeSelect(query);
+    Set<String> activeNames = new HashSet<>();
+    for (Map<String, String> row : activeRows) {
+      String uri = row.get("System");
+      if (uri != null) activeNames.add(localName(uri));
+    }
+    LOGGER.info("ListActiveSystems: found {} active system names in TAP_Core_Data", activeNames.size());
 
+    // Step 2: Get all System instances from FutureDB
+    String systemQuery =
+        "SELECT DISTINCT ?System WHERE {"
+        + " ?System <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        + "   <http://semoss.org/ontologies/Concept/System> ."
+        + "}";
+    QueryExecutor futureExecutor = new QueryExecutor(futureDbId);
+    List<Map<String, String>> systemRows = futureExecutor.executeSelect(systemQuery);
+
+    // Step 3: Keep only FutureDB Systems whose local name matches an ActiveSystem in TAP_Core_Data
     List<Map<String, Object>> result = new ArrayList<>();
-    for (Map<String, String> row : rows) {
+    for (Map<String, String> row : systemRows) {
       String uri = row.get("System");
       if (uri == null || uri.trim().isEmpty()) continue;
 
-      String label = localName(uri).replace('_', ' ');
+      String name = localName(uri);
+      if (!activeNames.contains(name)) continue;
 
       Map<String, Object> entry = new HashMap<>();
       entry.put("uri", uri);
-      entry.put("label", label);
+      entry.put("label", name.replace('_', ' '));
       result.add(entry);
     }
 
