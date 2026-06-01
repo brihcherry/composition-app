@@ -72,6 +72,8 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
       "<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>";
   private static final String CONCEPT_ACTIVE_SYSTEM =
       "<http://semoss.org/ontologies/Concept/ActiveSystem>";
+  private static final String CONCEPT_SYSTEM =
+      "<http://semoss.org/ontologies/Concept/System>";
   private static final String CONCEPT_SYSTEM_INTERFACE =
       "<http://semoss.org/ontologies/Concept/SystemInterface>";
   private static final String CONCEPT_DATA_OBJECT =
@@ -129,8 +131,11 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
     // Execute the same CONSTRUCT used by legacy insight #21 against each engine.
     // The CONSTRUCT resolves subPropertyOf through the engine's OWL schema,
     // which IRawSelectWrapper does not support for variable predicate binding.
-    buildBaseGraphFromEngine(new QueryExecutor(baseEngineId), systemUri, nodes, edges);
-    buildBaseGraphFromEngine(new QueryExecutor(decommEngineId), systemUri, nodes, edges);
+    // TAP_Core_Data uses ActiveSystem (declared in its OWL); FutureDB uses System
+    // (ActiveSystem triples are lost during loader-sheet round-trips since FutureDB's
+    // OWL does not declare ActiveSystem).
+    buildBaseGraphFromEngine(new QueryExecutor(baseEngineId), systemUri, CONCEPT_ACTIVE_SYSTEM, nodes, edges);
+    buildBaseGraphFromEngine(new QueryExecutor(decommEngineId), systemUri, CONCEPT_SYSTEM, nodes, edges);
 
     // The CONSTRUCT's Payload branch requires a Contains join on the Payload relation
     // instance, which may not exist for all ICD→DataObject connections. The legacy
@@ -174,10 +179,10 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
    * (Provide → system-to-ICD edge, Consume → ICD-to-system edge, etc.).
    */
   private void buildBaseGraphFromEngine(QueryExecutor executor, String systemUri,
-      Map<String, Map<String, Object>> nodes, List<Map<String, Object>> edges) {
+      String systemTypeConcept, Map<String, Map<String, Object>> nodes, List<Map<String, Object>> edges) {
 
     IDatabaseEngine engine = executor.getEngine();
-    String constructQuery = buildBaseConstructQuery(systemUri);
+    String constructQuery = buildBaseConstructQuery(systemUri, systemTypeConcept);
 
     LOGGER.info("GetCompositionTimeline: executing CONSTRUCT on engine={}", executor.getEngineId());
 
@@ -258,8 +263,13 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
   }
 
   /**
-   * Builds the exact CONSTRUCT query from legacy insight #21 (FutureDB_Questions.XML,
-   * Time-Perspective T1), with the system URI parameter substituted.
+   * Builds the CONSTRUCT query from legacy insight #21 (FutureDB_Questions.XML,
+   * Time-Perspective T1), with the system URI and type concept parameterized.
+   *
+   * <p>The {@code systemTypeConcept} allows using {@code ActiveSystem} for engines
+   * that declare it (TAP_Core_Data) and {@code System} for engines that don't
+   * (FutureDB — whose OWL never declared ActiveSystem, so loader-sheet rebuilds
+   * silently drop those type triples).
    *
    * <p>Two UNION branches:
    * <ul>
@@ -268,7 +278,7 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
    * </ul>
    * Both branches also pull DataObject via Payload and Contains properties.
    */
-  private String buildBaseConstructQuery(String systemUri) {
+  private String buildBaseConstructQuery(String systemUri, String systemTypeConcept) {
     return "CONSTRUCT {"
         + " ?System1 ?Upstream ?ICD ."
         + " ?ICD ?Downstream ?System2 ."
@@ -279,10 +289,10 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + " ?ICD2 ?Downstream2 ?System1 ."
         + " ?ICD2 ?carries2 ?Data2"
         + " } WHERE {"
-        + " {?System1 " + RDF_TYPE + " " + CONCEPT_ACTIVE_SYSTEM + " ;}"
+        + " {?System1 " + RDF_TYPE + " " + systemTypeConcept + " ;}"
         + " BIND(<" + systemUri + "> AS ?System1)"
         + " {"
-        + "  {?System2 " + RDF_TYPE + " " + CONCEPT_ACTIVE_SYSTEM + " ;}"
+        + "  {?System2 " + RDF_TYPE + " " + systemTypeConcept + " ;}"
         + "  {?Upstream " + RDFS_SUB_PROPERTY_OF + " " + REL_PROVIDE + " ;}"
         + "  {?ICD " + RDF_TYPE + " " + CONCEPT_ICD + " ;}"
         + "  {?Downstream " + RDFS_SUB_PROPERTY_OF + " " + REL_CONSUME + " ;}"
@@ -296,7 +306,7 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + " } UNION {"
         + "  {?Upstream2 " + RDFS_SUB_PROPERTY_OF + " " + REL_PROVIDE + " ;}"
         + "  {?Downstream2 " + RDFS_SUB_PROPERTY_OF + " " + REL_CONSUME + " ;}"
-        + "  {?System3 " + RDF_TYPE + " " + CONCEPT_ACTIVE_SYSTEM + " ;}"
+        + "  {?System3 " + RDF_TYPE + " " + systemTypeConcept + " ;}"
         + "  {?ICD2 " + RDF_TYPE + " " + CONCEPT_ICD + " ;}"
         + "  {?Data2 " + RDF_TYPE + " " + CONCEPT_DATA_OBJECT + " ;}"
         + "  {?carries2 " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD + " ;}"
@@ -306,7 +316,7 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + "  {?carries2 ?contains1 ?prop}"
         + "  {?contains1 " + RDF_TYPE + " " + REL_CONTAINS + " ;}"
         + " }"
-        + " }";
+        + "}";
   }
 
   /**
