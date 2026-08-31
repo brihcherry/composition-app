@@ -86,15 +86,36 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
       "<http://semoss.org/ontologies/Relation/Consume>";
   private static final String REL_PAYLOAD =
       "<http://semoss.org/ontologies/Relation/Payload>";
+  private static final String REL_PROVIDE_HEALTH =
+      "<http://health.mil/ontologies/Relation/Provide>";
+  private static final String REL_CONSUME_HEALTH =
+      "<http://health.mil/ontologies/Relation/Consume>";
+  private static final String REL_PAYLOAD_HEALTH =
+      "<http://health.mil/ontologies/Relation/Payload>";
 
   // URI prefixes for STRSTARTS-based predicate matching.
   // SEMOSS names all sub-property instances with the parent relation URI as a prefix
   // (e.g., Relation/Provide/System1:ICD1 is a sub-property of Relation/Provide).
   // Using STRSTARTS avoids relying on subPropertyOf schema triples being present in
   // the SELECT query index, which the IRawSelectWrapper does not guarantee.
-  private static final String REL_PROVIDE_PFX  = "http://semoss.org/ontologies/Relation/Provide";
-  private static final String REL_CONSUME_PFX  = "http://semoss.org/ontologies/Relation/Consume";
-  private static final String REL_PAYLOAD_PFX  = "http://semoss.org/ontologies/Relation/Payload";
+  private static final String[] REL_PROVIDE_PFX = {
+      "http://semoss.org/ontologies/Relation/Provide",
+      "https://semoss.org/ontologies/Relation/Provide",
+      "http://health.mil/ontologies/Relation/Provide",
+      "https://health.mil/ontologies/Relation/Provide"
+  };
+  private static final String[] REL_CONSUME_PFX = {
+      "http://semoss.org/ontologies/Relation/Consume",
+      "https://semoss.org/ontologies/Relation/Consume",
+      "http://health.mil/ontologies/Relation/Consume",
+      "https://health.mil/ontologies/Relation/Consume"
+  };
+  private static final String[] REL_PAYLOAD_PFX = {
+      "http://semoss.org/ontologies/Relation/Payload",
+      "https://semoss.org/ontologies/Relation/Payload",
+      "http://health.mil/ontologies/Relation/Payload",
+      "https://health.mil/ontologies/Relation/Payload"
+  };
   private static final String REL_CONTAINS_PFX = "http://semoss.org/ontologies/Relation/Contains/";
   private static final String REL_CONTAINS =
       "<http://semoss.org/ontologies/Relation/Contains>";
@@ -215,21 +236,21 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
       if (s == null || p == null || oStr == null) continue;
       tripleCount++;
 
-      if (p.startsWith(REL_PROVIDE_PFX)) {
+      if (matchesNamespacePrefix(p, REL_PROVIDE_PFX)) {
         // subject = system, object = ICD
         addSystemNode(nodes, s);
         addICDNode(nodes, oStr);
         addEdgeIfAbsent(edges, s, oStr, "Provide");
         provideCount++;
 
-      } else if (p.startsWith(REL_CONSUME_PFX)) {
+      } else if (matchesNamespacePrefix(p, REL_CONSUME_PFX)) {
         // subject = ICD, object = system
         addICDNode(nodes, s);
         addSystemNode(nodes, oStr);
         addEdgeIfAbsent(edges, s, oStr, "Consume");
         consumeCount++;
 
-      } else if (p.startsWith(REL_PAYLOAD_PFX)) {
+      } else if (matchesNamespacePrefix(p, REL_PAYLOAD_PFX)) {
         // subject = ICD, object = DataObject
         addICDNode(nodes, s);
         addDataObjectNode(nodes, oStr);
@@ -279,6 +300,13 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
    * Both branches also pull DataObject via Payload and Contains properties.
    */
   private String buildBaseConstructQuery(String systemUri, String systemTypeConcept) {
+    String provideSubPropertyClause = buildRelationSubPropertyClause("Upstream", "Provide");
+    String consumeSubPropertyClause = buildRelationSubPropertyClause("Downstream", "Consume");
+    String payloadSubPropertyClause = buildRelationSubPropertyClause("carries", "Payload");
+    String provideSubPropertyClause2 = buildRelationSubPropertyClause("Upstream2", "Provide");
+    String consumeSubPropertyClause2 = buildRelationSubPropertyClause("Downstream2", "Consume");
+    String payloadSubPropertyClause2 = buildRelationSubPropertyClause("carries2", "Payload");
+
     return "CONSTRUCT {"
         + " ?System1 ?Upstream ?ICD ."
         + " ?ICD ?Downstream ?System2 ."
@@ -293,23 +321,23 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + " BIND(<" + systemUri + "> AS ?System1)"
         + " {"
         + "  {?System2 " + RDF_TYPE + " " + systemTypeConcept + " ;}"
-        + "  {?Upstream " + RDFS_SUB_PROPERTY_OF + " " + REL_PROVIDE + " ;}"
+        + "  " + provideSubPropertyClause
         + "  {?ICD " + RDF_TYPE + " " + CONCEPT_ICD + " ;}"
-        + "  {?Downstream " + RDFS_SUB_PROPERTY_OF + " " + REL_CONSUME + " ;}"
+        + "  " + consumeSubPropertyClause
         + "  {?Data1 " + RDF_TYPE + " " + CONCEPT_DATA_OBJECT + " ;}"
-        + "  {?carries " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD + " ;}"
+        + "  " + payloadSubPropertyClause
         + "  {?System1 ?Upstream ?ICD ;}"
         + "  {?ICD ?Downstream ?System2 ;}"
         + "  {?ICD ?carries ?Data1 ;}"
         + "  {?carries ?contains2 ?prop2}"
         + "  {?contains2 " + RDF_TYPE + " " + REL_CONTAINS + " ;}"
         + " } UNION {"
-        + "  {?Upstream2 " + RDFS_SUB_PROPERTY_OF + " " + REL_PROVIDE + " ;}"
-        + "  {?Downstream2 " + RDFS_SUB_PROPERTY_OF + " " + REL_CONSUME + " ;}"
+        + "  " + provideSubPropertyClause2
+        + "  " + consumeSubPropertyClause2
         + "  {?System3 " + RDF_TYPE + " " + systemTypeConcept + " ;}"
         + "  {?ICD2 " + RDF_TYPE + " " + CONCEPT_ICD + " ;}"
         + "  {?Data2 " + RDF_TYPE + " " + CONCEPT_DATA_OBJECT + " ;}"
-        + "  {?carries2 " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD + " ;}"
+        + "  " + payloadSubPropertyClause2
         + "  {?System3 ?Upstream2 ?ICD2 ;}"
         + "  {?ICD2 ?Downstream2 ?System1 ;}"
         + "  {?ICD2 ?carries2 ?Data2 ;}"
@@ -317,6 +345,36 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + "  {?contains1 " + RDF_TYPE + " " + REL_CONTAINS + " ;}"
         + " }"
         + "}";
+  }
+
+  private static String buildRelationSubPropertyClause(String varName, String relationName) {
+    String semossUri = "<http://semoss.org/ontologies/Relation/" + relationName + ">";
+    String healthUri = "<http://health.mil/ontologies/Relation/" + relationName + ">";
+    return "{?" + varName + " " + RDFS_SUB_PROPERTY_OF + " " + semossUri + " ;}"
+        + " UNION "
+        + "{?" + varName + " " + RDFS_SUB_PROPERTY_OF + " " + healthUri + " ;}";
+  }
+
+  private static boolean matchesNamespacePrefix(String predicate, String[] prefixes) {
+    if (predicate == null || predicate.trim().isEmpty()) {
+      return false;
+    }
+
+    String normalized = predicate.trim();
+    for (String prefix : prefixes) {
+      if (normalized.startsWith(prefix)) {
+        return true;
+      }
+      String alternate = prefix.replace("http://", "https://");
+      if (!alternate.equals(prefix) && normalized.startsWith(alternate)) {
+        return true;
+      }
+      alternate = prefix.replace("https://", "http://");
+      if (!alternate.equals(prefix) && normalized.startsWith(alternate)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
@@ -392,7 +450,9 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
 
     String query =
         "SELECT DISTINCT ?ICD ?Data WHERE {"
-        + " {?carries " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD + " ;}"
+        + " {{?carries " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD + " ;}"
+        + "  UNION"
+        + "  {?carries " + RDFS_SUB_PROPERTY_OF + " " + REL_PAYLOAD_HEALTH + " ;}}"
         + " {?ICD ?carries ?Data ;}"
         + " {?Data " + RDF_TYPE + " " + CONCEPT_DATA_OBJECT + " ;}"
         + " VALUES ?ICD {" + buildValues(icdUris) + "}"
@@ -560,9 +620,13 @@ public class GetCompositionTimelineReactor extends AbstractProjectReactor {
         + " {?System1 " + RDF_TYPE + " " + CONCEPT_ACTIVE_SYSTEM + ";}"
         + " {?System1 <http://semoss.org/ontologies/Relation/Contains/Probability_of_Included_BoS_Enterprise_EHRS> 'High'}"
         + " {?decoICD " + RDF_TYPE + " " + CONCEPT_ICD + " ;}"
-        + " {{?System1 <http://semoss.org/ontologies/Relation/Provide> ?decoICD ;}}"
+        + " {{?System1 <http://semoss.org/ontologies/Relation/Provide> ?decoICD ;}"
+        + "  UNION"
+        + "  {?System1 <http://health.mil/ontologies/Relation/Provide> ?decoICD ;}}"
         + " UNION"
-        + " {{?decoICD <http://semoss.org/ontologies/Relation/Consume> ?System1 ;}}"
+        + " {{?decoICD <http://semoss.org/ontologies/Relation/Consume> ?System1 ;}"
+        + "  UNION"
+        + "  {?decoICD <http://health.mil/ontologies/Relation/Consume> ?System1 ;}}"
         + "}";
 
     List<Map<String, String>> rows = safeExecute(executor, query);
